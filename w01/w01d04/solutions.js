@@ -37,7 +37,7 @@ console.log(checkPalindrome("Ma"));
 
 
 const sumDigits = (num) => {
-  return num.toString().split();
+  return num.toString().split(" ");
 }
 
 sumDigits(45);
