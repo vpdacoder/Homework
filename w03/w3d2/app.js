@@ -12,16 +12,25 @@ function convertCurrency(event) {
       //retreiving the input value
       let amt = $('#amt').val();
 
-      if (event.target.id === 'us') {
-        console.log(amt * (json.rates.USD));
-      } else if (event.target.id === 'gbp') {
-        console.log(amt * (json.rates.GBP));
-      } else if (event.target.id === 'cny') {
-        console.log(amt * (json.rates.CNY));
-      } else if (event.target.id === 'jpy') {
-        console.log(amt * (json.rates.JPY));
-      }
       // exchange rata data is stored in json.rates.country code
+
+      if (event.target.id === 'us') {
+        let dolla = amt * (json.rates.USD);
+        $("#output_amount").append("<p></p>").text(dolla);
+        $("#output_currency").append("<p></p>").text('USD');
+      } else if (event.target.id === 'gbp') {
+        let dolla = amt * (json.rates.GBP);
+        $("#output_amount").append("<p></p>").text(dolla);
+        $("#output_currency").append("<p></p>").text('GBP');
+      } else if (event.target.id === 'cny') {
+        let dolla = amt * (json.rates.CNY);
+        $("#output_amount").append("<p></p>").text(dolla);
+        $("#output_currency").append("<p></p>").text('CNY');
+      } else if (event.target.id === 'jpy') {
+        let dolla = amt * (json.rates.JPY);
+        $("#output_amount").append("<p></p>").text(dolla);
+        $("#output_currency").append("<p></p>").text('JPY');
+      }
     }
   });
 }
