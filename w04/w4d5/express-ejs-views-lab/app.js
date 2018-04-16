@@ -21,6 +21,11 @@ app.use(logger('dev'));
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 
+app.get('/', (req,res) => {
+  res.render('index');
+});
+
+
 app.get("/pizza", function(req,res){
 	// let pizzaObj = pizza;
   res.render('pizza/pizza-index', {pizza:pizza});
