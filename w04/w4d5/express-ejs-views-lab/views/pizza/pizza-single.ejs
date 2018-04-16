@@ -2,3 +2,12 @@
   This view should only display one pizza, with flavor, location, and picture.
 -->
 
+<h1>Your Favorite Pizza Info </h1>
+
+    <ol>
+        <ul>
+          <li> <strong> Flavor </strong> : <%= pizza[fav-1].flavor.toUpperCase() %> </li>
+          <li> <strong> Location </strong> :<%= pizza[fav-1].location.toUpperCase() %> </li>
+          <li> <strong> Image URL </strong> :<%= pizza[fav-1].image%> </li>
+        </ul>
+    </ol>

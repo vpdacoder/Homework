@@ -21,9 +21,14 @@ app.use(logger('dev'));
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 
-app.get("/allpizza", function(req,res){
-	let pizzaObj = pizza;
-  res.render('pizza/pizza-index', {pizzaObj:pizzaObj});
+app.get("/pizza", function(req,res){
+	// let pizzaObj = pizza;
+  res.render('pizza/pizza-index', {pizza:pizza});
+})
+
+app.get("/pizza/:id", function (req,res){
+  let fav = req.params.id;
+  res.render('pizza/pizza-single', {fav:fav,pizza:pizza});
 })
 
 /* error handler */

@@ -6,12 +6,11 @@
 
 <h1>All the Pizzas </h1>
 
-<% pizzaObj.forEach(function(pizza){ %>
+<% pizza.forEach(function(pizza){ %>
   <ol>
       <ul>
         <li> <strong> Flavor </strong> : <%= pizza.flavor.toUpperCase() %> </li>
         <li> <strong> Location </strong> :<%= pizza.location.toUpperCase() %> </li>
-        <li> <strong> locationkey </strong> :<%= pizza.locationKey.toUpperCase() %> </li>
         <li> <strong> Image URL </strong> :<%= pizza.image%> </li>
       </ul>
   </ol>
